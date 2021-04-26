@@ -34,12 +34,12 @@ export default props => {
         </h2>
       ),
       [BLOCKS.UL_LIST]: (node, children) => (
-        <ul className="list-disc my-4 text-base text-gray-700 whitespace-pre-line">
+        <ul className="list-disc my-4 text-base text-white whitespace-pre-line">
           {children}
         </ul>
       ),
       [BLOCKS.DOCUMENT]: (node, children) => (
-        <p className="my-4 text-base text-gray-700 whitespace-pre-line">
+        <p className="my-4 text-base text-white whitespace-pre-line">
           {children}
         </p>
       ),
@@ -78,7 +78,7 @@ export default props => {
                 {summary}
               </h2>
               {description && (
-                <div className="my-4 text-base text-gray-700 whitespace-pre-line">
+                <div className="my-4 text-base text-white whitespace-pre-line">
                   {description.description}
                 </div>
               )}
@@ -88,7 +88,7 @@ export default props => {
                 </div>
               )}
             </div>
-            <div className="container my-4 text-base text-gray-700 whitespace-pre-line">
+            <div className="container my-4 text-base text-white whitespace-pre-line">
               {documentToReactComponents(explications.json, options)}
             </div>
           </div>
@@ -96,7 +96,7 @@ export default props => {
         {related && (
           <div className="bg-gray-100 py-12 lg:py-16">
             <div className="container">
-              <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-gray-900 mb-8">
+              <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-white mb-8">
                 A voir aussi
               </h2>
             </div>
