@@ -5,12 +5,14 @@ import SiteMetadata from "../components/SiteMetadata"
 import Button from "../components/Button"
 import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
-import Newsletter from "../components/Newsletter"
 import Layout from "../layouts/Layout"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { BLOCKS } from "@contentful/rich-text-types"
 
 export default props => {
   const {
     description,
+    explications,
     gallery,
     name,
     related,
@@ -18,6 +20,36 @@ export default props => {
     thumbnail,
     url,
   } = props.data.item
+
+  const options = {
+    renderNode: {
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-1">
+          {children}
+        </h1>
+      ),
+      [BLOCKS.HEADING_2]: (node, children) => (
+        <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
+          {children}
+        </h2>
+      ),
+      [BLOCKS.UL_LIST]: (node, children) => (
+        <ul className="list-disc my-4 text-base text-gray-700 whitespace-pre-line">
+          {children}
+        </ul>
+      ),
+      [BLOCKS.DOCUMENT]: (node, children) => (
+        <p className="my-4 text-base text-gray-700 whitespace-pre-line">
+          {children}
+        </p>
+      ),
+      [BLOCKS.HEADING_1]: (node, children) => (
+        <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-1">
+          {children}
+        </h1>
+      ),
+    },
+  }
 
   return (
     <Layout>
@@ -52,24 +84,26 @@ export default props => {
               )}
               {url && (
                 <div className="mt-8">
-                  <Button href={url}>More info</Button>
+                  <Button href={url}>Plus d'informations</Button>
                 </div>
               )}
             </div>
+            <div className="container my-4 text-base text-gray-700 whitespace-pre-line">
+              {documentToReactComponents(explications.json, options)}
+            </div>
           </div>
         </div>
+        {related && (
+          <div className="bg-gray-100 py-12 lg:py-16">
+            <div className="container">
+              <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-gray-900 mb-8">
+                A voir aussi
+              </h2>
+            </div>
+            <Cards items={related} hideLastItemOnMobile={true} />
+          </div>
+        )}
       </div>
-      {related && (
-        <div className="bg-gray-100 py-12 lg:py-16">
-          <div className="container">
-            <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-gray-900 mb-8">
-              You may also like
-            </h2>
-          </div>
-          <Cards items={related} hideLastItemOnMobile={true} />
-        </div>
-      )}
-      <Newsletter />
     </Layout>
   )
 }
@@ -79,6 +113,9 @@ export const query = graphql`
     item: contentfulPortfolio(slug: { eq: $slug }) {
       description {
         description
+      }
+      explications {
+        json
       }
       gallery {
         id

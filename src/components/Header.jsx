@@ -23,7 +23,9 @@ const Header = () => {
     <div className="container pt-6 pb-12 md:pt-12">
       <div className="flex justify-between items-center">
         <Link to="/">
-          <img alt="Logo" className="w-24 md:w-32" src="logo.svg" />
+          <p className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
+            Portfolio
+          </p>
         </Link>
 
         <button

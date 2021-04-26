@@ -5,6 +5,8 @@ import Hero from "../components/Hero"
 import Layout from "../layouts/Layout"
 import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
+import FetchRepoGit from "../components/FetchRepoGit"
+import ContactForm from "../components/ContactForm"
 
 const IndexPage = ({ data }) => {
   return (
@@ -20,7 +22,8 @@ const IndexPage = ({ data }) => {
           <div className="container">No projects found.</div>
         )}
       </div>
-      <Newsletter />
+      <FetchRepoGit />
+      <ContactForm />
     </Layout>
   )
 }
