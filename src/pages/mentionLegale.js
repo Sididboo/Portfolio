@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout"
 export default function mentionLegale() {
   return (
     <Layout>
-      <div className="container text-justify ">
+      <div className="container text-justify text-white">
         {" "}
         <h3 className="font-medium mt-3">MENTIONS LEGALES</h3>
         <h3 className="font-medium mt-3">INFORMATIONS EDITORIALES</h3>
@@ -18,9 +18,6 @@ export default function mentionLegale() {
           </a>
           <br />
           <strong>Propriétaire</strong> : Théo Vacant <br />
-          <strong>Adresse du proriétaire</strong> : 15 Avenue du Maréchal Foch
-          <br />
-          <strong>N° de téléphone du propriétaire</strong> : 0768469967 <br />
           <strong>Responsable de publication</strong> : Théo Vacant –
           contacts@theovacant.fr
           <br />

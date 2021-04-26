@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-sm md:text-base text-gray-700">
             &copy; 2021 Théo VACANT. Tout droit réservé.
-            <Link className="ml-2" to="mentionLegale.js">
+            <Link className="ml-2" to="/mentionLegale">
               Mentions légale
             </Link>
           </p>
