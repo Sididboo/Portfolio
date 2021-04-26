@@ -18,8 +18,8 @@ function DataFetching() {
   })
 
   return (
-    <div>
-      <h2 className="flex justify-center text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
+    <div className="bg-gray-900">
+      <h2 className="flex justify-center text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-white">
         Mes projets
       </h2>
       <div className="flex flex-col md:flex-row justify-center md:justify-center gap-4  ">

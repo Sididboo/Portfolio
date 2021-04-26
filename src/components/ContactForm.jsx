@@ -2,8 +2,8 @@ import React from "react"
 
 export default function ContactForm() {
   return (
-    <div>
-      <h2 className="flex justify-center mt-12 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
+    <div className="bg-gray-900">
+      <h2 className="flex justify-center mt-12 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-white">
         Contact
       </h2>
       <div className="flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto">

@@ -10,10 +10,12 @@ import { MdWork } from "react-icons/md"
 
 export default function Timeline() {
   return (
-    <div>
+    <div className="bg-gray-900">
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--education"
+          contentStyle={{ background: "#4a5568", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #4a5568" }}
           date="2019 - Présent"
           iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
           icon={<IoMdSchool />}
@@ -28,8 +30,8 @@ export default function Timeline() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+          contentStyle={{ background: "#4a5568", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #4a5568" }}
           date="2016 - 2019"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<MdWork />}
@@ -47,6 +49,8 @@ export default function Timeline() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
+          contentStyle={{ background: "#4a5568", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #4a5568" }}
           date="2015 - 2016"
           iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
           icon={<IoMdSchool />}
@@ -61,6 +65,8 @@ export default function Timeline() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
+          contentStyle={{ background: "#4a5568", color: "#fff" }}
+          contentArrowStyle={{ borderRight: "7px solid #4a5568" }}
           date="2014 - 2015"
           iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
           icon={<IoMdSchool />}

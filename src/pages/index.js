@@ -9,21 +9,23 @@ import ContactForm from "../components/ContactForm"
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
-      <SiteMetadata title="Home" description="Portfolio of John Doe" />
+    <div className="bg-gray-900">
+      <Layout>
+        <SiteMetadata title="Home" description="Portfolio Théo VACANT" />
 
-      <Hero />
+        <Hero />
 
-      <div className="bg-gray-100 py-12 lg:py-16">
-        {data.portfolio && data.portfolio.nodes.length > 0 ? (
-          <Cards items={data.portfolio.nodes} />
-        ) : (
-          <div className="container">No projects found.</div>
-        )}
-      </div>
-      <FetchRepoGit />
-      <ContactForm />
-    </Layout>
+        <div className="bg-gray-900 py-12 lg:py-16">
+          {data.portfolio && data.portfolio.nodes.length > 0 ? (
+            <Cards items={data.portfolio.nodes} />
+          ) : (
+            <div className="container">No projects found.</div>
+          )}
+        </div>
+        <FetchRepoGit />
+        <ContactForm />
+      </Layout>
+    </div>
   )
 }
 

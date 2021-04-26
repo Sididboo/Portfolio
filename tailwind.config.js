@@ -1,5 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.jsx", "./src/**/*.js"],
+  darkMode: "media",
   theme: {
     container: {
       center: true,

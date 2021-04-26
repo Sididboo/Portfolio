@@ -9,18 +9,18 @@ const AboutPage = ({ data }) => (
   <Layout>
     <SiteMetadata title="About" description="Sample description" />
 
-    <div className="bg-gray-100">
+    <div className="bg-gray-900">
       <div className="container py-12 lg:pb-16">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
-            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-white sm:text-4xl">
               A propos de moi
             </h1>
 
             <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
               Qui suis-je ?
             </h2>
-            <div className="mt-4 leading-loose">
+            <div className="text-white mt-4 leading-loose">
               Bonjour, je m'appelle Théo VACANT et j'ai 23 ans. Je suis
               originaire du Grand-Est, en particulier de Meurthe-et-Moselle.
               <br />
@@ -40,10 +40,10 @@ const AboutPage = ({ data }) => (
               Si vous souhaitez me contacter:
               <br />
               <a
-                href="mailto:contact@johndoe.com"
+                href="mailto:contacts@theovacant.fr"
                 className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-600"
               >
-                contacts@theovacant.Fr
+                contacts@theovacant.fr
               </a>
             </div>
           </div>
