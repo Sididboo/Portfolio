@@ -1,9 +1,7 @@
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import React from "react"
 import Layout from "../layouts/Layout"
-import Button from "../components/Button"
 import SiteMetadata from "../components/SiteMetadata"
+import downloadFile from "../../static/CV-VACANT_Theo.pdf"
 
 const AboutPage = ({ data }) => (
   <Layout>
@@ -27,15 +25,18 @@ const AboutPage = ({ data }) => (
               <br />
               Depuis que je suis enfant, je suis fasciné par l'informatique.
               J'ai toujours voulu devenir développeur ou avoir un métier en lien
-              avec le monde du numérique. Je suis actuellement en BTS SIO en
-              dernière année, je souhaite me tourner vers une Licence puis un
-              master si cela est possible.
+              avec le monde du numérique. Je suis actuellement en dernière année
+              du BTS SIO option SLAM, je souhaite me tourner vers une Licence
+              puis un master si cela est possible.
               <br />
               <br />
-              {/* <Button href="../../static/CV-TheoVACANT.pdf">
-                Télécharger mon CV
-              </Button>
-              <br/> */}
+              <a href={downloadFile}>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  {" "}
+                  Télécharger mon CV
+                </button>
+              </a>
+              <br />
               <br />
               Si vous souhaitez me contacter:
               <br />
@@ -46,14 +47,7 @@ const AboutPage = ({ data }) => (
                 contacts@theovacant.fr
               </a>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <Img
-              fluid={data.author.childImageSharp.fluid}
-              alt="Test"
-              className="rounded-md shadow-md"
-            />
-          </div>
+          </div>{" "}
         </div>
       </div>
     </div>
@@ -61,15 +55,3 @@ const AboutPage = ({ data }) => (
 )
 
 export default AboutPage
-
-export const query = graphql`
-  query {
-    author: file(relativePath: { eq: "author.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 800, quality: 85) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`

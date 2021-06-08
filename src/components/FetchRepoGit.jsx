@@ -26,13 +26,13 @@ function DataFetching() {
         {" "}
         {posts.map(post => (
           <a className="no-underline" href={post.html_url}>
-            <div className="max-w-md py-4 px-8 bg-white shadow-2xl rounded-lg my-20">
+            <div className="max-w-md w-80 min-w-full py-4 px-8 bg-white shadow-2xl rounded-lg my-20">
               <motion.button whileHover={{ scale: 1.1 }}>
                 <div>
                   <h2 className="text-black text-3xl font-semibold">
                     {post.name}
                   </h2>
-                  <p className="mt-2 text-gray-600">{post.html_url}</p>
+                  <p className="mt-2 text-gray-600">{post.description}</p>
                 </div>
                 <div className="mt-2 mb-2 inline-flex">
                   <AiFillEye className="mt-1 mr-2" /> {post.watchers_count}

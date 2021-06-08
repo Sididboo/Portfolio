@@ -5,7 +5,9 @@ const Hero = () => (
     {" "}
     <div className="container py-12 lg:pb-16">
       <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-white">
-        Bonjour, je m'appelle Théo VACANT. Je suis développeur Full-Stack{" "}
+        Bonjour, je m'appelle Théo VACANT.
+        <br />
+        Je suis étudiant en BTS SIO{" "}
         <span role="img" aria-label="waving hand">
           👋
         </span>
