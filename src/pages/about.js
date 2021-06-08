@@ -1,12 +1,9 @@
 import React from "react"
 import Layout from "../layouts/Layout"
-import SiteMetadata from "../components/SiteMetadata"
 import downloadFile from "../../static/CV-VACANT_Theo.pdf"
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SiteMetadata title="About" description="Sample description" />
-
     <div className="bg-gray-900">
       <div className="container py-12 lg:pb-16">
         <div className="flex flex-wrap">
@@ -42,7 +39,7 @@ const AboutPage = ({ data }) => (
               <br />
               <a
                 href="mailto:contacts@theovacant.fr"
-                className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-600"
+                className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-700"
               >
                 contacts@theovacant.fr
               </a>

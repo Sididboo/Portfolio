@@ -21,7 +21,7 @@ export default function mentionLegale() {
           <strong>Responsable de publication</strong> : Théo Vacant –
           contacts@theovacant.fr
           <br />
-          <strong>Webmaster</strong> : Théo Vacant – contacts@theovacant.fr
+          <strong>Webmaster</strong> : contacts@theovacant.fr
           <br />
           <strong>Créateur du site</strong> :{" "}
           <a href="https://portfolio.theovacant.fr">Théo Vacant</a>
