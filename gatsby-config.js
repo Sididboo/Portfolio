@@ -14,6 +14,8 @@ module.exports = {
       { name: "Home", to: "/" },
       { name: "A propos", to: "/about" },
       { name: "Parcours", to: "/parcours" },
+      { name: "Compétences", to: "/competence" },
+      { name: "Veille technologique et juridique", to: "/veille" },
     ],
     links: {
       linkedin: "https://www.linkedin.com/in/th%C3%A9o-vacant-985653187/",

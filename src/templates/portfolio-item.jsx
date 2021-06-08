@@ -43,11 +43,6 @@ export default props => {
           {children}
         </p>
       ),
-      [BLOCKS.HEADING_1]: (node, children) => (
-        <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl mb-1">
-          {children}
-        </h1>
-      ),
     },
   }
 
@@ -94,7 +89,7 @@ export default props => {
           </div>
         </div>
         {related && (
-          <div className="bg-gray-100 py-12 lg:py-16">
+          <div className="bg-gray-900 py-12 lg:py-16">
             <div className="container">
               <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-white mb-8">
                 A voir aussi

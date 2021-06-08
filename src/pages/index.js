@@ -5,7 +5,6 @@ import Hero from "../components/Hero"
 import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
 import FetchRepoGit from "../components/FetchRepoGit"
-import ContactForm from "../components/ContactForm"
 
 const IndexPage = ({ data }) => {
   return (
@@ -15,7 +14,7 @@ const IndexPage = ({ data }) => {
 
         <Hero />
 
-        <div className="bg-gray-900 py-12 lg:py-16">
+        <div className="flex flex-wrap content-center bg-gray-900 py-12 lg:py-16">
           {data.portfolio && data.portfolio.nodes.length > 0 ? (
             <Cards items={data.portfolio.nodes} />
           ) : (
@@ -23,7 +22,6 @@ const IndexPage = ({ data }) => {
           )}
         </div>
         <FetchRepoGit />
-        <ContactForm />
       </Layout>
     </div>
   )
