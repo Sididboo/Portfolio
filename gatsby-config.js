@@ -51,10 +51,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
-        failOnError: false
-      }
-    }
-
+        failOnError: false,
+      },
+    },
 
     {
       resolve: `gatsby-plugin-manifest`,
