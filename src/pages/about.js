@@ -39,7 +39,7 @@ const AboutPage = ({ data }) => (
               <br />
               <a
                 href="mailto:contacts@theovacant.fr"
-                className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-600"
+                className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-700"
               >
                 contacts@theovacant.fr
               </a>
